@@ -1,2 +1,4 @@
-# csd-340
-HTML CSS Class
+#CSD 340 Web Development with HTML and CSS
+## Contributors
+⋅⋅* Darren Darren Osier
+⋅⋅* Faith Siebert
