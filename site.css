@@ -1,0 +1,41 @@
+.container {
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+h1 {
+	background-color: #836953;
+	border: 1px solid;
+	border-color: #D6A800;
+	padding-top: 10px;
+}
+h2 {
+	background-color: #b38b6d;
+	border: 1px solid;
+	border-color: #D6A800;
+	padding-top: 10px;
+}
+h3 {
+	background-color: #bc987e;
+	border: 1px solid;
+	border-color: #D6A800;
+	padding-top: 10px;
+}
+h4 {
+	background-color: #d2b48c;
+	border: 1px solid;
+	border-color: #D6A800;
+	padding-top: 10px;
+}
+a {
+	color: #800020;
+	text-decoration: none;
+}
+
+a:hover {
+color: #BE0000; 	
+	
+}
+a:active {
+	color: #2B0202;
+}
