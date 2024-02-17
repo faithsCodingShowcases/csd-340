@@ -1,0 +1,59 @@
+<!-- Faith Siebert : Assignment 2.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CSD 340 Development with HTML and CSS</title>
+	<script>
+           var firstVariableValue = "fluffy";
+		   var secondVariableValue = "protect";
+		   var thirdVariableValue = "heros";
+		   var fourthVariableValue = "respect";
+		   
+		   function replaceall() {
+		    document.getElementById("fluffy").innerHTML = firstVariableValue;
+            document.getElementById("protect").innerHTML = secondVariableValue;
+			document.getElementById("heros").innerHTML = thirdVariableValue;
+			document.getElementById("respect").innerHTML = fourthVariableValue;
+		   }
+       </script>
+</head>
+
+<body>
+    <div id="container">
+	<h1>Assignment 9.3: JavaScript - Part 1</h1>
+	<h2>Who Am I In a Nut Shell?</h2>
+	<p class="intro">Dogs are the best friends of humans
+		They are loyal, loving, and fun
+		They come in different shapes and sizes
+		They have different colors and fur types
+		Some are big and some are small
+		Some are <span id = "fluffy">_________</span> and some are bald
+		Some are fast and some are slow
+		Some are smart and some are so-so</p>
+	<p>But no matter what kind of dog you have
+		They will always make you smile and laugh
+		They will always be there for you
+		They will always <span id = "protect">_________</span> you and comfort you
+		They will always listen to you and obey you
+		They will always play with you and cuddle with you
+		Dogs are more than just pets
+		They are family members and companions
+		They are <span id = "heros">_________</span> and helpers
+		They are teachers and learners
+		They are healers and supporters
+		They are dreamers and adventurers</p>
+	<p> Dogs are the best friends of humans
+		They deserve our <span id = "respect">_________</span> and kindness
+		They need our care and attention
+		They want our love and affection
+		They give us joy and happiness
+		They fill our lives with meaning and purpose</p>
+		 <p>
+           <button type="button"
+             onclick="replaceall()">View Words</button> <br />   
+       </p> 
+	</div>
+</body>
+
+</html>
