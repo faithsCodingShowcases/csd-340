@@ -1,0 +1,75 @@
+<!-- Faith Siebert Module 10 2/22/2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+      CSD 340 Web Development with HTML and CSS
+    </title>
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+	  function toggleBorder(image) {
+            if (image.style.border === '10px solid #ccc') {
+                image.style.border = '10px solid red'; 
+            } else {
+                image.style.border = '10px solid #ccc';
+            }
+        }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='Siebert_Mod10_3.css' />
+
+  </head>
+
+  <body>
+  <h1> CSD 340 Web Development with HTML and CSS</h1>
+    <br />
+    <div>
+      <a href=#
+         onmouseover="tree.src='tree_01.jpg';"
+         onmouseout= "tree.src='tree_02.jpg';"
+      >
+        <img border = 0 name = "tree" src = "tree_02.jpg" onclick="toggleBorder(this)">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='#191970';"
+         onmouseout= "this.style.color='#4169E1';">
+
+      Run your mouse over the image to change.
+      <br />
+
+    </div>
+    <div>
+      <a href=#
+         onmouseover="monkey.src='monkey_01.webp';"
+         onmouseout= "monkey.src='monkey_02.webp';"
+      >
+        <img border = 0 name = "monkey" src = "monkey_02.webp" onclick="toggleBorder(this)">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='#191970';"
+         onmouseout= "this.style.color='#4169E1';">
+
+      Run your mouse over the image to change.
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+
+  </body>
+
+</html>
