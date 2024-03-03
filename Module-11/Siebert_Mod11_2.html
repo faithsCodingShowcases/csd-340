@@ -1,0 +1,58 @@
+<!-- Faith Siebert Module 11 3/3/2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This webpage allows you to:</p>
+    <ul>
+        <li>Add an item: Input a string into the text box and click the "Add" button (minimum 3 characters).</li>
+        <li>Remove the last item: Click the "Delete Last Entry" button.</li>
+        <li>Show the list: Click the "Display" button.</li>
+    </ul>
+
+    <form>
+        <input type="text" id="inputBox" minlength="3" placeholder="Enter a string">
+        <button type="button" onclick="addElement()">Add</button>
+        <button type="button" onclick="deleteLastEntry()">Delete Last Entry</button>
+        <button type="button" onclick="displayArray()">Display</button>
+    </form>
+
+    <script>
+        const myArray = [];
+
+        function addElement() {
+            const input = document.getElementById("inputBox").value;
+            if (input.length >= 3) {
+                myArray.push(input);
+                alert(`Added: ${input}`);
+            } else {
+                alert("Input must be at least 3 characters.");
+            }
+        }
+
+        function deleteLastEntry() {
+            if (myArray.length > 0) {
+                myArray.pop();
+                alert("Last entry deleted.");
+            } else {
+                alert("Array is empty.");
+            }
+        }
+
+        function displayArray() {
+            const list = document.createElement("ul");
+            for (let i = 0; i < myArray.length; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${i + 1}. ${myArray[i]}`;
+                list.appendChild(listItem);
+            }
+            document.body.appendChild(list);
+        }
+    </script>
+</body>
+</html>
