@@ -1,0 +1,83 @@
+<!-- Faith Siebert 3/8/24 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Siebert_Mod10_2.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <div class="left">
+      <h3>Top 10 Favorite Books</h3>
+	  <button onclick="displayAscending()">Top to Bottom</button>
+      <button onclick="displayDescending()">Bottom to Top</button>
+      <ol id="bookList">
+        <li>A Separate Peace by John Knowles</li>
+        <li>A Series of Unfortunate Events by Lemony Snicket</li>
+        <li>A Wrinkle in Time by Madeleine L'Engle</li>
+        <li>Anger Is a Gift: A Novel by Mark Oshiro</li>
+        <li>Bridge to Terabithia by Katherine Paterson</li>
+        <li>Divergent by Veronica Roth</li>
+        <li>Five Feet Apart by Rachael Lippincott</li>
+        <li>Holes by Louis Sachar</li>
+        <li>The Road by Cormac McCarthy</li>
+        <li>The White Hotel by D.M. Thomas</li>
+      </ol>
+      
+    </div>
+   
+	<div class="right">
+
+      <h3>5 Things I've Learned Since the Course Started</h3>
+      <ul>
+        <li>How to create diffrent types of lists.</li>
+        <li>How to submit a web page to github pages.</li>
+        <li>That there are diffrent alternatives to hosting.</li>
+        <li>Illusion of colors and the effect they have on people.</li>
+        <li>How to make a side by side list.</li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <a href="../index.html">Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const bookTitles = [
+      "A Separate Peace by John Knowles",
+      "A Series of Unfortunate Events by Lemony Snicket",
+      "A Wrinkle in Time by Madeleine L'Engle",
+	  "Anger Is a Gift: A Novel by Mark Oshiro",
+        "Bridge to Terabithia by Katherine Paterson",
+        "Divergent by Veronica Roth",
+        "Five Feet Apart by Rachael Lippincott",
+        "Holes by Louis Sachar",
+        "The Road by Cormac McCarthy",
+        "The White Hotel by D.M. Thomas"
+    ];
+
+    function displayAscending() {
+      const sortedTitles = bookTitles.slice().sort();
+      updateBookList(sortedTitles);
+    }
+
+    function displayDescending() {
+      const sortedTitles = bookTitles.slice().sort().reverse();
+      updateBookList(sortedTitles);
+    }
+
+    function updateBookList(titles) {
+      const bookList = document.getElementById("bookList");
+      bookList.innerHTML = ""; 
+      titles.forEach((title) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = title;
+        bookList.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>
